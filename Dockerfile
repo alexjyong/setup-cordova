@@ -9,5 +9,5 @@ RUN apk update && apk upgrade && \
 ENV JAVA_HOME "/usr/lib/jvm/java-8-openjdk"
 
 COPY entrypoint.sh /usr/src/entrypoint.sh
-RUN apk add gcompat
+
 ENTRYPOINT ["/usr/src/entrypoint.sh"]
