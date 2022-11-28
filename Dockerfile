@@ -1,8 +1,8 @@
 FROM runmymind/docker-android-sdk:alpine-standalone
 
 RUN apk update && apk upgrade && \
-    apk del openjdk11 && \
-    apk add gradle npm openjdk8 && \
+    apk del openjdk11 glibc && \
+    apk add gradle npm openjdk8 gcompat && \
     npm config set unsafe-perm true && \
     npm install -g cordova
 
